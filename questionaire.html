@@ -1,0 +1,34 @@
+<html></html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>redirect</title>
+</head>
+
+<body>
+<script>
+//上面的不要碰
+/*
+這邊式要修改的部分
+要改的部分 陣列形式
+減少就拿掉 格式 [1,2,3,4] 拿掉3 就是 [1,2,4] 要加的話一樣[1,2,3,4,5] 
+兩個 ' ' 中間放網址
+改到一個都沒有的時候把這個index.html擋按砍掉
+*/
+var urls = ['https://forms.gle/8UYtr1AWLT3tov9b8',
+'https://forms.gle/1WVdGAtqQDyCLCAd6',
+'https://forms.gle/cC4Y8eagbLRctK3f9',
+'https://forms.gle/YxDUbWTaE7wY2a3t9'
+];
+//下面的不要碰
+var min = 0;
+var max = urls.length - 1;
+if(max==0){
+ window.location.href='https://www.google.com.tw';
+ }
+else{
+ var random = Math.floor(Math.random() * (max - min + 1)) + min;
+ window.location.href=urls[random];
+ }
+</script>
+</body>
+</html>
